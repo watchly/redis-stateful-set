@@ -1,0 +1,20 @@
+{
+  "apiVersion": "v1",
+  "kind": "PersistentVolume",
+  "metadata": {
+    "name": "secondary-2"
+  },
+  "spec": {
+    "accessModes": [
+      "ReadWriteOnce"
+    ],
+    "capacity": {
+      "storage": "5Gi"
+    },
+    "gcePersistentDisk": {
+      "fsType": "ext4",
+      "pdName": "redis-secondary-2"
+    },
+    "persistentVolumeReclaimPolicy": "Retain"
+  }
+}
