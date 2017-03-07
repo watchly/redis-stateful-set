@@ -37,8 +37,10 @@ spec:
   volumeClaimTemplates:
   - metadata:
       name: redis-primary-volume
+      annotations:
+        volume.beta.kubernetes.io/storage-class: "slow"
     spec:
       accessModes: [ "ReadWriteOnce" ]
       resources:
         requests:
-          storage: 5Gi
+          storage: 100Gi

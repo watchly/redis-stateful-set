@@ -17,7 +17,7 @@ metadata:
   name: redis-sentinel
 spec:
   serviceName: redis-sentinel
-  replicas: 3
+  replicas: 5
   template:
     metadata:
       labels:
