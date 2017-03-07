@@ -15,3 +15,5 @@ kubectl patch statefulset debug --type='json' -p="[{\"op\": \"replace\", \"path\
 kubectl delete pod debug-0
 
 echo "Update 'debug' pod should be available in a few minutes"
+
+docker rmi gcr.io/watchly-service/debug:${VERSION}
